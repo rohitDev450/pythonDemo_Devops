@@ -33,4 +33,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Run application
-              run: python app.py
+              run: |
+                echo "Deploying application..."
+                # Example: python app.py
+                python app.py
