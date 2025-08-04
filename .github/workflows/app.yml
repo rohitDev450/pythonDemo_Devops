@@ -48,4 +48,4 @@ jobs:
                run: |
                 echo "Deploying application..."
                 # Example: python app.py
-                python app.py
+                nohup python app.py
