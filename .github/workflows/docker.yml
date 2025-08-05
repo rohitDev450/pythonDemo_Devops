@@ -26,7 +26,7 @@ jobs:
               run: |
                 # Assuming you have tests defined, replace with actual test command
                 echo "Running tests..."
-                # Example: pytest
+                # Example: pytestt
 
     deploy:
         needs: test
