@@ -3,7 +3,7 @@ on: [push, pull_request]
 
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
@@ -20,7 +20,7 @@ jobs:
 
     test:
         needs: build
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
             - name: Run tests
               run: |
@@ -30,7 +30,7 @@ jobs:
 
     deploy:
         needs: test
-        runs-on: ubuntu-latest
+        runs-on: self-hosted
         steps:
              - name: Checkout code
                uses: actions/checkout@v2
@@ -47,5 +47,5 @@ jobs:
              - name: Run application
                run: |
                 echo "Deploying application..."
-                # Example: python app.py
+                python app.py
             
