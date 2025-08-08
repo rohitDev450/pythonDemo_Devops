@@ -1,5 +1,6 @@
 services:
   backend:
     build: .
+     image: rohitar/python-demo:${DOCKER_TAG}
     ports:
       - "5000:5000"
